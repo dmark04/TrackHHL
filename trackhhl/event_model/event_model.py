@@ -1,4 +1,5 @@
 import dataclasses
+from typing import List
 
 @dataclasses.dataclass(frozen=True)
 class Hit:
@@ -24,7 +25,7 @@ class Module:
     z: float
     lx: float
     ly: float
-    hits: list[Hit]
+    hits: List[Hit]
     
     def __eq__(self, __value: object) -> bool:
         if self.module_id == __value.module_id:
@@ -43,7 +44,7 @@ class MCInfo:
 class Track:
     track_id: int
     mc_info : MCInfo
-    hits    : list[Hit]
+    hits    : List[Hit]
     
     def __eq__(self, __value: object) -> bool:
         if self.track_id == __value.track_id:
@@ -53,9 +54,9 @@ class Track:
 
 @dataclasses.dataclass(frozen=True)
 class Event:
-    modules: list[Module]
-    tracks: list[Track]
-    hits: list[Hit]
+    modules: List[Module]
+    tracks: List[Track]
+    hits: List[Hit]
     
     
     

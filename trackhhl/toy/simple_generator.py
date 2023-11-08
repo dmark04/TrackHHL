@@ -2,13 +2,14 @@ import numpy as np
 import trackhhl.event_model as em
 import dataclasses
 from itertools import count
+from typing import List
 
 @dataclasses.dataclass(frozen=True)
 class SimpleDetectorGeometry:
-    module_id   : list[int]
-    lx          : list[float]
-    ly          : list[float]
-    z           : list[float]
+    module_id   : List[int]
+    lx          : List[float]
+    ly          : List[float]
+    z           : List[float]
     
     def __getitem__(self, index):
         return (self.module_id[index], self.lx[index], self.ly[index], self.z[index])
