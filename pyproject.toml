@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.8, <3.13"
-qiskit = "^0.45.0"
+qiskit = ">0.45.0"
 mplhep = "^0.3.30"
 quantum-linear-solvers = "^0.1.1"
 
